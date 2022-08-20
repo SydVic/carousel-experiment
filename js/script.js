@@ -400,4 +400,9 @@ function addEventListenerToDots() {
 
 
 // ------------------------------------------------------------------------------
+changeVisiblesThumbs();
 // prova per far scorrere lo slider
+function changeVisiblesThumbs() {
+  let totalVisibleThumbs = document.querySelectorAll('.carousel-thumb');
+  console.log(totalVisibleThumbs);
+};
