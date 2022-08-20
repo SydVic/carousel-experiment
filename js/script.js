@@ -174,6 +174,10 @@ document.querySelector('.next').addEventListener('click', function() {
   createLinkedSliderDots();
   // per aggiungere l'event listener ai dots dello slider linkato
   addEventListenerToDots();
+
+  // -----------------------------------------------------------------------
+  changeVisiblesThumbsNext();
+  // -----------------------------------------------------------------------
 });
 // --- FINE CAROUSEL PRINCIPALE ---
 
@@ -400,9 +404,48 @@ function addEventListenerToDots() {
 
 
 // ------------------------------------------------------------------------------
-changeVisiblesThumbs();
+// come collegare il fatto che in css gli dici solo 3 e fare dinamico il numero di slide in javascript??
+const totalThumbs = document.querySelectorAll('.carousel-thumb');
+const totalVisibleThumbs = 3;
+
+changeVisiblesThumbsNext();
 // prova per far scorrere lo slider
-function changeVisiblesThumbs() {
-  let totalVisibleThumbs = document.querySelectorAll('.carousel-thumb');
-  console.log(totalVisibleThumbs);
+function changeVisiblesThumbsNext() {
+  // cosi il node list restituisce perchè vede anche quelle in overflow hiddem
+
+  if (currentSlide >= totalVisibleThumbs) {
+    totalThumbs[currentSlide - totalVisibleThumbs].classList.add('d-none');
+  } else {
+    // const thumbDnone = document.querySelector('.carousel-thumb.d-none');
+    // console.log('thumbDnone', thumbDnone);
+    // document.querySelector('.carousel-thumb.d-none').classList.remove('d-none');
+    // console.log('perchè non va?');
+
+    const totalDnoneThumbs = document.querySelectorAll('.carousel-thumb.d-none');
+    // console.log('totalDnoneThumbs', totalDnoneThumbs);
+    totalDnoneThumbs.forEach((item) => {
+      item.classList.remove('d-none');
+    });
+
+  };
+  // console.log('changeVisibleThumbs');
+  // console.log(currentSlide);
+  // console.log(totalThumbs);
 };
+
+// changeVisiblesThumbsPrev();
+// prova per far scorrere lo slider
+// function changeVisiblesThumbsprev() {
+  // cosi il node list restituisce perchè vede anche quelle in overflow hiddem
+
+  // if (currentSlide >= totalVisibleThumbs) {
+  //   for (i = 0; i <= (totalThumbs - totalVisibleThumbs); i++) {
+  //     let item = 
+  //   };
+  // } else {
+
+  // };
+  // console.log('changeVisibleThumbs');
+  // console.log(currentSlide);
+  // console.log(totalThumbs);
+// };

@@ -39,6 +39,9 @@
 }
 
 /* COMMON */
+.d-none {
+  display: none;
+}
 .paragraph {
   font-family: 'Noto Sans', sans-serif;
 }
