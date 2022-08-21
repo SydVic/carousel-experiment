@@ -182,7 +182,7 @@ document.querySelector('.next').addEventListener('click', function() {
 // --- FINE CAROUSEL PRINCIPALE ---
 
 // LINKED CAROUSEL E SUOI CONTROLLI
-const linkedItemsContainer = document.querySelector('.linked-carousel-items');
+const linkedCarouselContainer = document.querySelector('.linked-carousel-container');
 let currentLinkedSlide = 0;
 
 // creaimo lo slider linkato
@@ -292,13 +292,50 @@ function changeActive(index) {
   document.querySelectorAll('.carousel-thumb')[index].classList.add('active');
 };
 
+// funzioni per far scorrere il carousel principale e mostrare le immagini che non si vedono
+// -----------------------------------------------------------------------------------------
+// trovare un modo per rendere dinamico la const totalVisiblesThumbs
+// -----------------------------------------------------------------------------------------
+const totalThumbs = document.querySelectorAll('.carousel-thumb');
+const totalVisiblesThumbs = 3;
+
+// per aggiungere la classe d-none e rimuoverla allo scorrerveavanti dello slider principale
+function changeVisiblesThumbsNext() {
+
+  if (currentSlide >= totalVisiblesThumbs) {
+
+    totalThumbs[currentSlide - totalVisiblesThumbs].classList.add('d-none');
+  } else {
+
+    const totalDnoneThumbs = document.querySelectorAll('.carousel-thumb.d-none');
+
+    totalDnoneThumbs.forEach((item) => {
+      item.classList.remove('d-none');
+    });
+  };
+};
+
+// per aggiungere la classe d-none e rimuoverla allo scorrere indietro dello slider principale
+function changeVisiblesThumbsPrev() {
+
+  if (currentSlide >= totalVisiblesThumbs) {
+    for (let i = 0; i < (totalThumbs.length - totalVisiblesThumbs); i++) {
+      totalThumbs[i].classList.add('d-none');
+    };
+  };
+
+  if (currentSlide <= (totalThumbs.length - totalVisiblesThumbs)) {
+    totalThumbs[currentSlide].classList.remove('d-none');
+  };
+};
+
 // FUNZIONI DELLO SLIDER LINKATO
 // creiamo lo slider linkato all'immagine principale
 function createLinkedItems() {
   
   let linkedItems = data[currentSlide].linkedInfo;
 
-  linkedItemsContainer.innerHTML = '';
+  linkedCarouselContainer.innerHTML = '';
 
   linkedItems.forEach((item, index) => {
     // aggiungiamo la classe active alla prima slide (currentLinkedSlide = 0)
@@ -307,7 +344,7 @@ function createLinkedItems() {
       firstActive = 'active';
     };
 
-    linkedItemsContainer.innerHTML += `
+    linkedCarouselContainer.innerHTML += `
       <div class="linked-carousel-item ${firstActive}">
         <img src="${item.image}" alt="${item.name}">
       </div>
@@ -399,42 +436,4 @@ function addEventListenerToDots() {
       currentLinkedSlide = index;
     });
   });
-};
-
-
-
-// ------------------------------------------------------------------------------
-// come collegare il fatto che in css gli dici solo 3 e fare dinamico il numero di slide in javascript??
-const totalThumbs = document.querySelectorAll('.carousel-thumb');
-const totalVisiblesThumbs = 3;
-
-// prova per far scorrere lo slider
-function changeVisiblesThumbsNext() {
-  // cosi il node list restituisce perchè vede anche quelle in overflow hiddem
-
-  if (currentSlide >= totalVisiblesThumbs) {
-
-    totalThumbs[currentSlide - totalVisiblesThumbs].classList.add('d-none');
-  } else {
-
-    const totalDnoneThumbs = document.querySelectorAll('.carousel-thumb.d-none');
-
-    totalDnoneThumbs.forEach((item) => {
-      item.classList.remove('d-none');
-    });
-  };
-};
-
-// per aggiungere la classe d-none e rimuoverla allo scorrere indietro dello slider principale
-function changeVisiblesThumbsPrev() {
-
-  if (currentSlide >= totalVisiblesThumbs) {
-    for (let i = 0; i < (totalThumbs.length - totalVisiblesThumbs); i++) {
-      totalThumbs[i].classList.add('d-none');
-    };
-  };
-
-  if (currentSlide <= (totalThumbs.length - totalVisiblesThumbs)) {
-    totalThumbs[currentSlide].classList.remove('d-none');
-  };
 };
