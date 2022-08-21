@@ -148,10 +148,8 @@ document.querySelector('.prev').addEventListener('click', function() {
   changeLinkedCuriosity(currentSlide);
   // per aggiungere l'event listener ai dots dello slider linkato
   addEventListenerToDots();
-
-  // -----------------------------------------------------------------------
+  // per aggiungere la classe d-none e rimuoverla allo scorrere indietro dello slider principale
   changeVisiblesThumbsPrev();
-  // -----------------------------------------------------------------------
 });
 
 // Slide successiva
@@ -178,10 +176,8 @@ document.querySelector('.next').addEventListener('click', function() {
   createLinkedSliderDots();
   // per aggiungere l'event listener ai dots dello slider linkato
   addEventListenerToDots();
-
-  // -----------------------------------------------------------------------
+  // per aggiungere la classe d-none e rimuoverla allo scorrere avanti dello slider principale
   changeVisiblesThumbsNext();
-  // -----------------------------------------------------------------------
 });
 // --- FINE CAROUSEL PRINCIPALE ---
 
@@ -412,7 +408,6 @@ function addEventListenerToDots() {
 const totalThumbs = document.querySelectorAll('.carousel-thumb');
 const totalVisiblesThumbs = 3;
 
-// changeVisiblesThumbsNext();
 // prova per far scorrere lo slider
 function changeVisiblesThumbsNext() {
   // cosi il node list restituisce perchè vede anche quelle in overflow hiddem
@@ -420,7 +415,6 @@ function changeVisiblesThumbsNext() {
   if (currentSlide >= totalVisiblesThumbs) {
 
     totalThumbs[currentSlide - totalVisiblesThumbs].classList.add('d-none');
-
   } else {
 
     const totalDnoneThumbs = document.querySelectorAll('.carousel-thumb.d-none');
@@ -431,7 +425,7 @@ function changeVisiblesThumbsNext() {
   };
 };
 
-// prova per far scorrere lo slider
+// per aggiungere la classe d-none e rimuoverla allo scorrere indietro dello slider principale
 function changeVisiblesThumbsPrev() {
 
   if (currentSlide >= totalVisiblesThumbs) {
@@ -442,8 +436,5 @@ function changeVisiblesThumbsPrev() {
 
   if (currentSlide <= (totalThumbs.length - totalVisiblesThumbs)) {
     totalThumbs[currentSlide].classList.remove('d-none');
-  }
-  
-  console.log('currentSlide', currentSlide);
-  console.log('totalVisiblesThumbs', totalVisiblesThumbs);
+  };
 };
