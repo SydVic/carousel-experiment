@@ -194,13 +194,18 @@
   width: 100%;
   height: var(--logo-container-height);
   background-color: rgb(255, 255, 255);
+  text-align: center;
+  vertical-align: middle;
+  line-height: var(--logo-container-height);
+  font-size: 2rem;
+  font-family: 'Aboreto', cursive;
 }
 
-.logo-container img {
+/* .logo-container img {
   width: 100%;
   height: 100%;
   object-fit: contain;
-}
+} */
 
 /* LINKED SECTION */
 .linked-section-container {

@@ -150,6 +150,9 @@ document.querySelector('.prev').addEventListener('click', function() {
   addEventListenerToDots();
   // per aggiungere la classe d-none e rimuoverla allo scorrere indietro dello slider principale
   changeVisiblesThumbsPrev();
+
+  
+  changeMainActiveDot(currentSlide);
 });
 
 // Slide successiva
@@ -178,6 +181,8 @@ document.querySelector('.next').addEventListener('click', function() {
   addEventListenerToDots();
   // per aggiungere la classe d-none e rimuoverla allo scorrere avanti dello slider principale
   changeVisiblesThumbsNext();
+
+  changeMainActiveDot(currentSlide);
 });
 // --- FINE CAROUSEL PRINCIPALE ---
 
@@ -437,3 +442,70 @@ function addEventListenerToDots() {
     });
   });
 };
+
+
+// ---------------------------------------------------------------------------
+// stampiamo i dot del carousel principale in base a quante immagini ci sono
+const mainDotsContainer = document.querySelector('.main-dots-container');
+// console.log(mainDotsContainer);
+const numberOfMainDots = data.length;
+// console.log(numberOfMainDots);
+
+createMainCarouselDots();
+function createMainCarouselDots() {
+  for (let i = 0; i < numberOfMainDots; i++) {
+
+    let firstActiveMainDot = '';
+    if (i == currentSlide) {
+      firstActiveMainDot = 'active-dot';
+    };
+
+    mainDotsContainer.innerHTML += `
+    <div class="main-dot  ${ firstActiveMainDot }"></div>
+    `;
+
+  };
+};
+
+
+function changeMainActiveDot(index) {
+  
+  // togliamo la classe active dal dot
+  document.querySelector('.main-dot.active-dot').classList.remove('active-dot');
+
+  // aggiungiamo la classe active al dot corrente
+  document.querySelectorAll('.main-dot')[index].classList.add('active-dot');
+};
+
+
+addEventListenerToMainDots();
+function addEventListenerToMainDots() {
+  let mainCarouselDots = document.querySelectorAll('.main-dot');
+
+  mainCarouselDots.forEach((item, index) => {
+    item.addEventListener('click', function() {
+    currentSlide = index;
+    changeActive(currentSlide);
+    // per riportare la slide linkata alla prima immagine se cambiamo l'immagine nel carousel principale
+    resetCurrentLinkedSlide();
+    // per cambiare anche lo slider linkato
+    createLinkedItems();
+    // crea i dots nello slider linkato
+    createLinkedSliderDots();
+    // per aggiungere l'event listener ai dots dello slider linkato
+    addEventListenerToDots();
+    // per cambiare il testo dello slider linkato
+    changeLinkedText(currentSlide, currentLinkedSlide);
+    // per cambiare le curiosità linkate all'immagine principale
+    changeLinkedCuriosity(currentSlide);
+
+
+
+    changeVisiblesThumbsNext();
+    changeVisiblesThumbsPrev();
+    changeMainActiveDot(index);
+    });
+  });
+};
+
+
