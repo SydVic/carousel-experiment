@@ -28,6 +28,7 @@
   --brand-primary: rgb(243, 101, 35);
   --brand-primary-rgba: rgba(243, 101, 35, 0.5);
   --black: rgb(0, 0, 0);
+  --white: rgb(255, 255, 255);
 
 }
 
@@ -60,20 +61,20 @@
   margin: 0 auto;
   display: flex;
   align-items: center;
-
-  /* tets */
-  background-color: aqua;
 }
 
 .carousel-items {
   width: var(--carousel-image-width-xs);
   height: 100%;
+  position: relative;
 }
 
 .carousel-item {
   height: 100%;
   display: none;
+  /* ------------------------------------------------------------------------- */
   position: relative;
+  /* ------------------------------------------------------------------------- */
 }
 
 .carousel-item img {
@@ -124,49 +125,47 @@
 }
 
 /* MAIN CAROUSEL */ /* CONTROLS */
-.prev, .next {
-  width: 20px;
-  height: 20px;
-  margin: 10px 0;
-  border-radius: 50%;
-  background: var(--brand-primary-rgba);
+.carousel-controls-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
   position: absolute;
-  left: 50%;
-  transform: translate(-50%);
-  cursor: pointer;
+  right: 10px;
+  padding: 15px 0;
   z-index: 999;
 }
 
+.main-dot {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  /* background-color: var(--black); */
+  border: 3px solid var(--white);
+  margin: 5px 0;
+  cursor: pointer;
+}
+
+.prev, .next {
+  width: 20px;
+  height: 20px;
+  line-height: 16px;
+  text-align: center;
+  vertical-align: middle;
+  border-radius: 50%;
+  /* background-color: var(--black); */
+  border: 3px solid var(--white);
+  color: var(--black);
+  cursor: pointer;
+}
+
+.prev {
+  transform: rotate(90deg);
+}
+
 .next {
-  bottom: 0;
-}
-
-.prev::after {
-  content: '';
-  width: 10px;
-  height: 10px;
-  transform: rotate(45deg);
-  border-top: 1px solid #000000;
-  border-right: 1px solid #000000;
-  display: block;
-  position: absolute;
-  top: 35%;
-  left: 50%;
-  transform: translate(-50%) rotate(-45deg);
-}
-
-.next::before {
-  content: '';
-  width: 10px;
-  height: 10px;
-  transform: rotate(45deg);
-  border-top: 1px solid #000000;
-  border-right: 1px solid #000000;
-  display: block;
-  position: absolute;
-  bottom: 35%;
-  left: 50%;
-  transform: translate(-50%) rotate(135deg);
+  transform: rotate(90deg);
 }
 
 /* MAIN CAROUSEL MEDIA QUERY */
