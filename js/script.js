@@ -23,7 +23,7 @@ const data = [
   },
   {
     title: "Milano",
-    carouselImage: "images/milano/milano-slider.png",
+    carouselImage: "images/milano/milano-slider.jpg",
     linkedInfo: [
       {
         name: "Duomo di Milano",
@@ -40,11 +40,11 @@ const data = [
   },
   {
     title: "Parigi",
-    carouselImage: "images/parigi/parigi-slider.jpeg",
+    carouselImage: "images/parigi/parigi-slider.jpg",
     linkedInfo: [
       {
         name: "Champs Élysées",
-        image: "images/parigi/champs-elysees.webp",
+        image: "images/parigi/champs-elysees.jpg",
         text: "Lavenue degli Champs-Elysées costituisce una delle passeggiate più celebri al mondo ma anche uno dei luoghi della capitale francese che maggiormente hanno perso l’eleganza e il fascino d’un tempo, trasformandosi in un’area votata al consumismo e all’apparenza.Questa lunga strada si divide in due parti, quella prossima alla place de la Concorde è caratterizzata da giardini che ospitano quattro ristoranti (Ledoyen, Laurent, Gabriel, Elysées-Lenôtre), due teatri (Marigny e Rond-Point) ed un padiglione dedicato a ristorazione e spettacolo (Espace Cardin). A partire dalla rotonda chiamata del Rond-Point, importante snodo del traffico in questa zona di Parigi, lo scenario cambia e inizia un défilé di palazzi, ristoranti e negozi. In questa zona, si trovano boutique d’alta moda, eleganti saloni d’automobili, diversi cinema e il famoso Lido, uno dei più celebri cabaret parigini.",
       },
       {
@@ -55,19 +55,18 @@ const data = [
     ],
     linkedCuriosity: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum adipisci reprehenderit veritatis laborum temporibus esse illum saepe? Sit doloremque ipsum repellat qui distinctio a vitae veritatis itaque cupiditate, blanditiis debitis.Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum adipisci reprehenderit veritatis laborum temporibus esse illum saepe? Sit doloremque ipsum repellat qui distinctio a vitae veritatis itaque cupiditate, blanditiis debitis.Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum adipisci reprehenderit veritatis laborum temporibus esse illum saepe? Sit doloremque ipsum repellat qui distinctio a vitae veritatis itaque cupiditate, blanditiis debitis.Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum adipisci reprehenderit veritatis laborum temporibus esse illum saepe? Sit doloremque ipsum repellat qui distinctio a vitae veritatis itaque cupiditate, blanditiis debitis.Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum adipisci reprehenderit veritatis laborum temporibus esse illum saepe? Sit doloremque ipsum repellat qui distinctio a vitae veritatis itaque cupiditate, blanditiis debitis. Ipsum adipisci reprehenderit veritatis laborum temporibus esse illum saepe? Sit doloremque ipsum repellat qui distinctio a vitae veritatis itaque cupiditate, blanditiis debitis.Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum adipisci reprehenderit veritatis laborum temporibus esse illum saepe? Sit doloremque ipsum repellat qui distinctio a vitae veritatis itaque cupiditate, blanditiis debitis.Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum adipisci reprehenderit veritatis laborum temporibus esse illum saepe? Sit doloremque ipsum repellat qui distinctio a vitae veritatis itaque cupiditate, blanditiis debitis."
   },
-  // ------------------------------------------------------------------------------
   {
     title: "Hong Kong",
-    carouselImage: "images/hong-kong/hong-kong-slider.webp",
+    carouselImage: "images/hong-kong/hong-kong-slider.jpg",
     linkedInfo: [
       {
-        name: "Hong Kong",
-        image: "images/hong-kong/hong-kong-slider.webp",
-        text: "Lavenue degli Champs-Elysées costituisce una delle passeggiate più celebri al mondo ma anche uno dei luoghi della capitale francese che maggiormente hanno perso l’eleganza e il fascino d’un tempo, trasformandosi in un’area votata al consumismo e all’apparenza.Questa lunga strada si divide in due parti, quella prossima alla place de la Concorde è caratterizzata da giardini che ospitano quattro ristoranti (Ledoyen, Laurent, Gabriel, Elysées-Lenôtre), due teatri (Marigny e Rond-Point) ed un padiglione dedicato a ristorazione e spettacolo (Espace Cardin). A partire dalla rotonda chiamata del Rond-Point, importante snodo del traffico in questa zona di Parigi, lo scenario cambia e inizia un défilé di palazzi, ristoranti e negozi. In questa zona, si trovano boutique d’alta moda, eleganti saloni d’automobili, diversi cinema e il famoso Lido, uno dei più celebri cabaret parigini.",
+        name: "Kowloon Park",
+        image: "images/hong-kong/kowloon-park.jpg",
+        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum adipisci reprehenderit veritatis laborum temporibus esse illum saepe? Sit doloremque ipsum repellat qui distinctio a vitae veritatis itaque cupiditate, blanditiis debitis.Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum adipisci reprehenderit veritatis laborum temporibus esse illum saepe? Sit doloremque ipsum repellat qui distinctio a vitae veritatis itaque cupiditate, blanditiis debitis.Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum adipisci reprehenderit veritatis laborum temporibus esse illum saepe? Sit doloremque ipsum repellat qui distinctio a vitae veritatis itaque cupiditate, blanditiis debitis.Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum adipisci reprehenderit veritatis laborum temporibus esse illum saepe? Sit doloremque ipsum repellat qui distinctio a vitae veritatis itaque cupiditate, blanditiis debitis.Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum adipisci reprehenderit veritatis laborum temporibus esse illum saepe? Sit doloremque ipsum repellat qui distinctio a vitae veritatis itaque cupiditate, blanditiis debitis. Ipsum adipisci reprehenderit veritatis laborum temporibus esse illum saepe? Sit doloremque ipsum repellat qui distinctio a vitae veritatis itaque cupiditate, blanditiis debitis.Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum adipisci reprehenderit veritatis laborum temporibus esse illum saepe? Sit doloremque ipsum repellat qui distinctio a vitae veritatis itaque cupiditate, blanditiis debitis.Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum adipisci reprehenderit veritatis laborum temporibus esse illum saepe? Sit doloremque ipsum repellat qui distinctio a vitae veritatis itaque cupiditate, blanditiis debitis.",
       },
       {
-        name: "Hong Kong",
-        image: "images/hong-kong/hong-kong-slider.webp",
+        name: "TianTan Buddha",
+        image: "images/hong-kong/tian-tan-buddha.jpg",
         text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro quisquam rerum magni eos excepturi voluptas sit eum velit culpa numquam eius libero facilis inventore, cumque sequi ab saepe veniam quia.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Distinctio expedita sint blanditiis impedit? Incidunt blanditiis dolores quae in consequatur dolorum vitae totam, perferendis nulla labore adipisci impedit obcaecati ipsam quis?Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis, delectus perspiciatis blanditiis minus voluptas cumque cum aperiam. Omnis minima quaerat, alias fugit laboriosam vel nemo tempora dolorem nam. Deleniti, ipsum.",
       },
     ],
@@ -78,13 +77,13 @@ const data = [
     carouselImage: "images/los-angeles/los-angeles-slider.jpg",
     linkedInfo: [
       {
-        name: "Los Angeles",
-        image: "images/los-angeles/los-angeles-slider.jpg",
-        text: "Lavenue degli Champs-Elysées costituisce una delle passeggiate più celebri al mondo ma anche uno dei luoghi della capitale francese che maggiormente hanno perso l’eleganza e il fascino d’un tempo, trasformandosi in un’area votata al consumismo e all’apparenza.Questa lunga strada si divide in due parti, quella prossima alla place de la Concorde è caratterizzata da giardini che ospitano quattro ristoranti (Ledoyen, Laurent, Gabriel, Elysées-Lenôtre), due teatri (Marigny e Rond-Point) ed un padiglione dedicato a ristorazione e spettacolo (Espace Cardin). A partire dalla rotonda chiamata del Rond-Point, importante snodo del traffico in questa zona di Parigi, lo scenario cambia e inizia un défilé di palazzi, ristoranti e negozi. In questa zona, si trovano boutique d’alta moda, eleganti saloni d’automobili, diversi cinema e il famoso Lido, uno dei più celebri cabaret parigini.",
+        name: "Santa Monica",
+        image: "images/los-angeles/santa-monica.jpg",
+        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum adipisci reprehenderit veritatis laborum temporibus esse illum saepe? Sit doloremque ipsum repellat qui distinctio a vitae veritatis itaque cupiditate, blanditiis debitis.Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum adipisci reprehenderit veritatis laborum temporibus esse illum saepe? Sit doloremque ipsum repellat qui distinctio a vitae veritatis itaque cupiditate, blanditiis debitis.Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum adipisci reprehenderit veritatis laborum temporibus esse illum saepe? Sit doloremque ipsum repellat qui distinctio a vitae veritatis itaque cupiditate, blanditiis debitis.Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum adipisci reprehenderit veritatis laborum temporibus esse illum saepe? Sit doloremque ipsum repellat qui distinctio a vitae veritatis itaque cupiditate, blanditiis debitis.Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum adipisci reprehenderit veritatis laborum temporibus esse illum saepe? Sit doloremque ipsum repellat qui distinctio a vitae veritatis itaque cupiditate, blanditiis debitis. Ipsum adipisci reprehenderit veritatis laborum temporibus esse illum saepe? Sit doloremque ipsum repellat qui distinctio a vitae veritatis itaque cupiditate, blanditiis debitis.Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum adipisci reprehenderit veritatis laborum temporibus esse illum saepe? Sit doloremque ipsum repellat qui distinctio a vitae veritatis itaque cupiditate, blanditiis debitis.Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum adipisci reprehenderit veritatis laborum temporibus esse illum saepe? Sit doloremque ipsum repellat qui distinctio a vitae veritatis itaque cupiditate, blanditiis debitis.",
       },
       {
-        name: "Los Angeles",
-        image: "images/los-angeles/los-angeles-slider.jpg",
+        name: "Holliwood View",
+        image: "images/los-angeles/holliwood-view.jpg",
         text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro quisquam rerum magni eos excepturi voluptas sit eum velit culpa numquam eius libero facilis inventore, cumque sequi ab saepe veniam quia.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Distinctio expedita sint blanditiis impedit? Incidunt blanditiis dolores quae in consequatur dolorum vitae totam, perferendis nulla labore adipisci impedit obcaecati ipsam quis?Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis, delectus perspiciatis blanditiis minus voluptas cumque cum aperiam. Omnis minima quaerat, alias fugit laboriosam vel nemo tempora dolorem nam. Deleniti, ipsum.",
       },
     ],
